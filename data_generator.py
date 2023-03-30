@@ -95,12 +95,3 @@ def perfect_balistic_data_with_air_resistance(v_0, theta, mass=0.5, rho=1.2, dt=
         s_y.append(s_y[-1] + v_y[-1] * dt)
         t.append(t[-1] + dt)
     return s_x, s_y, t
-
-
-"""
-s_x,s_y, t = perfect_balistic_data_with_air_resistance(500, 45, mass=10.43, rho=1.2, dt=0.01, Cd=0.47, sphere_radius=0.11)
-import matplotlib.pyplot as plt
-fig = plt.figure()
-plt.plot(s_x, s_y)
-plt.show()
-"""

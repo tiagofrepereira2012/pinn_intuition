@@ -187,26 +187,3 @@ def train_nn(s_x, s_y, t, model, epochs=10, data_offset=None, train_fn=simple_nn
     s_hat[:, 1] = s_hat[:, 1] * std_y + mu_y
 
     return s_hat
-
-
-"""
-from data_generator import (
-    perfect_balistic_data_with_air_resistance,
-    noisy_balistic_data_with_air_resistance,
-)
-
-s_x, s_y, t = perfect_balistic_data_with_air_resistance(
-    500, 45, mass=10.43, rho=1.2, dt=0.1, Cd=0.47, sphere_radius=0.11
-)
-
-# Create a simple neural network
-layers = []
-layers.append(nn.Linear(1, 128))
-layers.append(nn.GELU())
-layers.append(nn.Linear(128, 2))
-model = nn.Sequential(*layers)
-print(model)
-
-
-s_hat = train_nn(s_x, s_y, t, model=model, epochs=10, train_fn=simple_pinn_train_loop)
-"""
