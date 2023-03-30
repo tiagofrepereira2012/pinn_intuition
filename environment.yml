@@ -1,0 +1,12 @@
+name: pinn-intuition
+channels:
+- conda-forge
+dependencies:
+- python==3.10
+- jupyterlab
+- matplotlib
+- tqdm
+- pip:
+  - torch
+  - torchvision
+  - ipdb
